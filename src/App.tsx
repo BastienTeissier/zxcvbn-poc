@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 const SignUpLegacy = lazy(() => import('./pages/SignUpLegacy/SignUpLegacy'));
+const SignUp = lazy(() => import('./pages/SignUp/SignUp'));
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <BrowserRouter>
         <Suspense fallback={<></>}>
         <Switch>
-        <Route exact path="/sign-up" component={SignUpLegacy} />
+        <Route exact path="/sign-up-legacy" component={SignUpLegacy} />
+        <Route exact path="/sign-up" component={SignUp} />
         </Switch>
           </Suspense>
           </BrowserRouter>
